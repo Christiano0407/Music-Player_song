@@ -13,8 +13,28 @@ const cover = document.getElementById(`cover`);
 const currTime = document.querySelector('#currTime');
 const durTime = document.querySelector('#durTime');
 
-const songs = [`hey`, `summer`, `ukelele`]; 
+// Song titles
+const songs = ['hey', 'summer', 'ukulele'];
 
-let songIndex = 2; 
+// Keep track of song
+let songIndex = 2;
 
-loadSong(songs[songIndex]); 
+// Initially load song details into DOM
+loadSong (songs[songIndex]);
+
+// Update song details
+function loadSong(song) {
+  title.innerText = song;
+  audio.src = `../assets/music/${song}.mp3`;
+  cover.src = `../assets/images/${song}.jpg`;
+}
+
+// Play song
+function playSong() {
+  musicContainer.classList.add('play');
+  playBtn.querySelector('i.fas').classList.remove('fa-play');
+  playBtn.querySelector('i.fas').classList.add('fa-pause');
+
+  audio.play();
+}
+

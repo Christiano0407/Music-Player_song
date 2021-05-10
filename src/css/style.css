@@ -1,3 +1,8 @@
+:root {
+    --color-White: #ffffff; 
+    --color-black: #000000; 
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -23,5 +28,133 @@ body {
     font-family: 'Lato', sans-serif;
     width: 100%;
     height: 100vh;
+    background-image: linear-gradient(
+    0deg,
+    rgba(247, 247, 247, 1) 23.8%,
+    rgba(252, 221, 221, 1) 92%
+  );
 }
 
+.music-contain {
+    height: 100vh;
+    width: 75vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+
+    position: relative;
+    background-color: var(--color-White);
+    border-radius: 1.5rem;
+    box-shadow: 0 20px 20px 0 rgba(252, 169, 169, 0.6);
+    padding: 2rem 3rem;
+    z-index: 10;
+}
+
+.music-contain h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: bold;
+
+}
+
+.img-container {
+    position: relative;
+    /* width: 110px; */
+    width: 50vw;
+}
+.img-container::after {
+  /*   content: ''; */
+  /* background-color: #fff; */
+  /* border-radius: 50%; */
+  /* position: absolute; */
+  /* bottom: 100%; */
+  /* left: 50%; */
+  /* width: 20px; */
+  /* height: 20px; */
+  /* transform: translate(-50%, 50%); */
+
+  content: "";
+  background-color: #000;
+
+}
+.img-container img {
+    width: 100%;
+    /* height: 110px; */
+    border-radius: 2rem;
+    object-fit: cover;
+   /*  position: absolute; */
+   /*  bottom: 0; */
+   /*  left: 0; */
+   /* animation: rotate 3s linear infinite; */
+   position: relative;
+}
+
+/* .music-contain.play .img-container img { */
+/*    animation-play-state: running;  */
+/* } */
+
+/* @keyframes rotate { */
+/*     from { */
+/*       transform: rotate(0deg); */
+/*     } */
+/*    */
+/*     to { */
+/*       transform: rotate(360deg); */
+/*     } */
+/*   } */
+.music-info {
+    background-color: rgba(252, 221, 221, 0.5);
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 2rem;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+}
+.music-contain.play .music-info {
+    opacity: 1;
+}
+.music-info h4 {
+ margin: 0;
+}
+
+.progress-container {
+    background: #ffffff;
+    cursor: pointer;
+    width: 100%;
+
+}
+
+.progress {
+    background-color: #fe8daa;
+    height: 100%;
+    width: 0%;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    margin-top: 1rem;
+}
+.action-btn {
+    background-color: var(--color-White);
+    border: 0;
+    color: #dfdfdf;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 1rem;
+    margin: 0 2rem;
+}
+.action-btn.action-btn-big {
+    color: #cdc2d0;
+    font-size: 3rem;
+}
+.action-btn:focus {
+    outline: 0;
+}

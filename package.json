@@ -1,0 +1,23 @@
+{
+  "name": "music-player_song",
+  "version": "1.0.0",
+  "description": "project-play-song-app",
+  "main": "src/js/index.js",
+  "scripts": {
+    "play": "node src/js/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Christiano0407/Music-Player_song.git"
+  },
+  "keywords": [
+    "javascript",
+    "song"
+  ],
+  "author": "Christiano0407",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Christiano0407/Music-Player_song/issues"
+  },
+  "homepage": "https://github.com/Christiano0407/Music-Player_song#readme"
+}
